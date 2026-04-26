@@ -1,6 +1,6 @@
-# DUMA Premium Agency Website
+# DUMA AI Agency Website
 
-Premium React + Tailwind website for DUMA Digital Agency.
+Premium React + Tailwind website for DUMA AI Agency.
 
 Live site:
 https://duma-premium-agency.vercel.app

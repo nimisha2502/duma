@@ -4,12 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        night: "#03110D",
-        dark: "#06251D",
+        night: "#071A16",
+        dark: "#0F2E27",
         plum: "#0B3B2E",
         gold: "#10B981",
-        cream: "#F5F1E8",
-        champagne: "#E7D7A1",
+        mint: "#D1FAE5",
+        cream: "#D1FAE5",
         pure: "#FFFFFF",
       },
       fontFamily: {
@@ -25,6 +25,7 @@ export default {
         "slow-spin": "slowSpin 34s linear infinite",
         "gold-pulse": "goldPulse 3.2s ease-in-out infinite",
         "marquee": "marquee 28s linear infinite",
+        "services-scroll": "servicesScroll 42s linear infinite",
       },
       keyframes: {
         floatLux: {
@@ -39,6 +40,10 @@ export default {
           "50%": { opacity: "1", transform: "scale(1.04)" },
         },
         marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
+        },
+        servicesScroll: {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-50%)" },
         },
