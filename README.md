@@ -3,7 +3,7 @@
 Premium React + Tailwind website for DUMA AI Agency.
 
 Live site:
-https://duma-premium-agency.vercel.app
+https://duma-digital.vercel.app
 
 ## Local Development
 
