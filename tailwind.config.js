@@ -4,10 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        night: "#080B14",
-        dark: "#101828",
-        gold: "#D4AF37",
-        cream: "#F8F5EE",
+        night: "#03110D",
+        dark: "#06251D",
+        plum: "#0B3B2E",
+        gold: "#10B981",
+        cream: "#F5F1E8",
+        champagne: "#E7D7A1",
         pure: "#FFFFFF",
       },
       fontFamily: {
@@ -15,7 +17,7 @@ export default {
         display: ["Cormorant Garamond", "serif"],
       },
       boxShadow: {
-        aureate: "0 0 80px rgba(212, 175, 55, 0.24)",
+        aureate: "0 0 80px rgba(16, 185, 129, 0.26)",
         velvet: "0 32px 110px rgba(0, 0, 0, 0.46)",
       },
       animation: {

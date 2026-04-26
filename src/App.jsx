@@ -95,7 +95,7 @@ function DreamMark({ className = "", compact = false }) {
         <defs>
           <radialGradient id="dumaGlow" cx="50%" cy="50%" r="60%">
             <stop offset="0%" stopColor="#F8F5EE" stopOpacity="0.98" />
-            <stop offset="42%" stopColor="#D4AF37" stopOpacity="0.92" />
+            <stop offset="42%" stopColor="#10B981" stopOpacity="0.92" />
             <stop offset="100%" stopColor="#7d6320" stopOpacity="0.72" />
           </radialGradient>
         </defs>
@@ -108,7 +108,7 @@ function DreamMark({ className = "", compact = false }) {
           strokeWidth="4"
           className="origin-center animate-slow-spin"
         />
-        <circle cx="110" cy="95" r="9" fill="#D4AF37" />
+        <circle cx="110" cy="95" r="9" fill="#10B981" />
         {[0, 45, 90, 135, 180, 225, 270, 315].map((angle) => (
           <line
             key={angle}
@@ -116,7 +116,7 @@ function DreamMark({ className = "", compact = false }) {
             y1="95"
             x2={110 + 62 * Math.cos((angle * Math.PI) / 180)}
             y2={95 + 62 * Math.sin((angle * Math.PI) / 180)}
-            stroke="#D4AF37"
+            stroke="#10B981"
             strokeOpacity="0.55"
             strokeWidth="1.5"
           />
@@ -131,7 +131,7 @@ function DreamMark({ className = "", compact = false }) {
         <path
           d="M80 151 C82 170, 77 184, 65 199 M110 163 C108 183, 110 196, 110 214 M140 151 C138 170, 143 184, 155 199"
           fill="none"
-          stroke="#D4AF37"
+          stroke="#10B981"
           strokeLinecap="round"
           strokeWidth="3"
         />
