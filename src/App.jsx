@@ -37,7 +37,7 @@ const services = [
   },
   {
     title: "Chatbots",
-    icon:<FaRobot />,
+    icon: <FaRobot />,
     summary: "Smart website assistants that answer questions, qualify leads, and guide visitors instantly.",
     does: "Deploys conversational AI that understands common customer needs and routes people toward the right next step.",
     benefits: ["24/7 response", "Lead qualification", "Lower support load", "Improved visitor confidence"],
@@ -46,7 +46,7 @@ const services = [
   },
   {
     title: "Workflow Automation",
-    icon:<FaCogs />,
+    icon: <FaCogs />,
     summary: "Automated systems that remove repetitive admin and keep your team moving faster.",
     does: "Connects tools, triggers, forms, notifications, and data flows so routine work happens without manual chasing.",
     benefits: ["Reduced manual tasks", "Cleaner operations", "Faster follow-up", "Fewer missed steps"],
@@ -55,7 +55,7 @@ const services = [
   },
   {
     title: "WhatsApp Automation",
-    icon:<FaWhatsapp />,
+    icon: <FaWhatsapp />,
     summary: "Customer conversations, lead follow-ups, and reminders automated through WhatsApp flows.",
     does: "Builds WhatsApp response and follow-up systems for inquiries, booking journeys, updates, and nurturing.",
     benefits: ["Instant replies", "Higher response rates", "Automated follow-ups", "Better customer experience"],
