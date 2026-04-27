@@ -3,12 +3,12 @@ import {
  FaGlobe,
  FaRobot,
  FaCogs,
- FaWhatsapp,
+ FaComments,
  FaBullhorn,
  FaFilter,
  FaPalette,
  FaSearch,
- FaInstagram,
+ FaShareAlt,
  FaTools,
  FaUsers,
  FaCalendarAlt,
@@ -145,7 +145,7 @@ const services = [
   },
   {
     title: "Business Process Automation",
-    icon:<ProjectDiagram />,
+    icon:<FaProjectDiagram />,
     summary: "End-to-end automation for repeated business processes across departments and tools.",
     does: "Transforms manual sequences into clear automated systems for intake, approval, delivery, and reporting.",
     benefits: ["Operational clarity", "Time savings", "Fewer errors", "Better accountability"],
@@ -413,8 +413,8 @@ function Services({ onSelectService }) {
               type="button"
               onClick={() => onSelectService(service)}
             >
-              <span className="service-orb flex items-center justify-center text-xl text-[#D1FAE5]">
-                {service.icon}
+              <span className="service-orb flex items-center justify-center text-[22px] text-[#D1FAE5] leading-none">
+               {service.icon}
               </span>
               <p className="mb-4 text-xs font-black uppercase tracking-[0.2em] text-gold">
                 {String((index % services.length) + 1).padStart(2, "0")}
