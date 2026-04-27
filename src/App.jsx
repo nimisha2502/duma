@@ -381,7 +381,9 @@ function Services({ onSelectService }) {
               type="button"
               onClick={() => onSelectService(service)}
             >
-              <span className="service-orb" aria-hidden="true" />
+              <span className="service-orb flex items-center justify-center text-lg text-white" aria-hidden="true">
+  ⚡
+</span>
               <p className="mb-4 text-xs font-black uppercase tracking-[0.2em] text-gold">
                 {String((index % services.length) + 1).padStart(2, "0")}
               </p>
