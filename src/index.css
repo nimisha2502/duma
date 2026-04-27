@@ -250,17 +250,12 @@ a {
   opacity: 1;
 }
 
-.service-orb {
-  display: block;
-  height: 3rem;
-  width: 3rem;
-  border-radius: 999px;
-  border: 1px solid rgba(16, 185, 129, 0.45);
-  background:
-    radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.72), transparent 18%),
-    radial-gradient(circle, rgba(16, 185, 129, 0.42), rgba(16, 185, 129, 0.08) 64%);
-  box-shadow: 0 0 34px rgba(16, 185, 129, 0.2);
-  margin-bottom: 1.5rem;
+.service-orb{
+ width:58px;
+ height:58px;
+ border-radius:9999px;
+ border:1px solid rgba(209,250,229,.16);
+ background:rgba(255,255,255,.02);
 }
 
 .field-label {
