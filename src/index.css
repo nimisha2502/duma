@@ -171,9 +171,9 @@ a {
   text-wrap: balance;
 }
 
-.logo-aura {
- filter: drop-shadow(0 0 10px rgba(16,185,129,0.12));
-}
+
+
+
 
 .particle-field span {
   position: absolute;
@@ -187,27 +187,43 @@ a {
   animation-delay: var(--delay, 0s);
 }
 
-.ai-core {
-  background: rgba(255,255,255,0.015);
-  box-shadow:
-    inset 0 0 40px rgba(255,255,255,0.015),
-    0 0 40px rgba(16,185,129,0.05);
-}
+
+
+
 
 .services-rail {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  padding-block: 0.5rem 1.5rem;
-  mask-image: linear-gradient(90deg, transparent, black 9%, black 91%, transparent);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.services-rail::-webkit-scrollbar {
+  display: none;
 }
 
 .services-track {
   display: flex;
+  gap: 2rem;
   width: max-content;
-  gap: 1.25rem;
-  animation: servicesScroll 46s linear infinite;
-  padding-inline: max(1rem, calc((100vw - 1200px) / 2));
+  padding: 0 1rem;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .marquee-track {
+    animation: none;
+  }
+
+  .services-rail {
+    overflow-x: auto;
+  }
 }
 
 .services-rail:hover .services-track {
@@ -490,7 +506,15 @@ a {
     font-size: 1.5rem;
   }
 }
-
+ .ai-core {
+  background: transparent !important;
+  box-shadow: none !important;
+  }
+  
+  .logo-aura {
+  filter: none !important;
+  opacity: 0.9;
+  }
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
