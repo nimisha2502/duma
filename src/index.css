@@ -107,7 +107,7 @@ a {
 
 .glass {
   border: 1px solid rgba(209, 250, 229, 0.12);
-  background: rgba(255,255,255,0.008);
+  background: rgba(255,255,255,0.02);
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.09);
   backdrop-filter: blur(22px);
 }
@@ -171,9 +171,9 @@ a {
   text-wrap: balance;
 }
 
-
-
-
+.logo-aura {
+  filter: drop-shadow(0 0 14px rgba(16, 185, 129, 0.18));
+}
 
 .particle-field span {
   position: absolute;
@@ -187,43 +187,25 @@ a {
   animation-delay: var(--delay, 0s);
 }
 
-
-
-
-
-.services-rail {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+.ai-core {
+  box-shadow: none;
+  background: transparent;
 }
 
-.services-rail::-webkit-scrollbar {
-  display: none;
+.services-rail {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-block: 0.5rem 1.5rem;
+  mask-image: linear-gradient(90deg, transparent, black 9%, black 91%, transparent);
 }
 
 .services-track {
   display: flex;
-  gap: 2rem;
   width: max-content;
-  padding: 0 1rem;
-}
-
-.marquee-track {
-  display: flex;
-  gap: 2rem;
-  width: max-content;
-  animation: marquee 25s linear infinite;
-}
-
-/* MOBILE FIX */
-@media (max-width: 768px) {
-  .marquee-track {
-    animation: none;
-  }
-
-  .services-rail {
-    overflow-x: auto;
-  }
+  gap: 1.25rem;
+  animation: servicesScroll 46s linear infinite;
+  padding-inline: max(1rem, calc((100vw - 1200px) / 2));
 }
 
 .services-rail:hover .services-track {
@@ -266,12 +248,17 @@ a {
   opacity: 1;
 }
 
-.service-orb{
- width:58px;
- height:58px;
- border-radius:9999px;
- border:1px solid rgba(209,250,229,.16);
- background:rgba(255,255,255,.02);
+.service-orb {
+  display: block;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 999px;
+  border: 1px solid rgba(16, 185, 129, 0.45);
+  background:
+    radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.72), transparent 18%),
+    radial-gradient(circle, rgba(16, 185, 129, 0.42), rgba(16, 185, 129, 0.08) 64%);
+  box-shadow: 0 0 34px rgba(16, 185, 129, 0.2);
+  margin-bottom: 1.5rem;
 }
 
 .field-label {
@@ -506,15 +493,7 @@ a {
     font-size: 1.5rem;
   }
 }
- .ai-core {
-  background: transparent !important;
-  box-shadow: none !important;
-  }
-  
-  .logo-aura {
-  filter: none !important;
-  opacity: 0.9;
-  }
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
