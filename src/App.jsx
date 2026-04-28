@@ -371,7 +371,7 @@ function IntelligenceRibbon() {
           key={index}
           className="text-sm font-bold uppercase tracking-[0.24em] text-mint/[0.56]"
         >
-          {word} <span className="ml-6 text-gold">+</span>
+          {word} 
         </span>
       ))}
     </div>
