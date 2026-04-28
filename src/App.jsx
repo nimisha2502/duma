@@ -348,8 +348,11 @@ function Hero() {
           <div className="absolute inset-0 animate-slow-spin rounded-full border border-dashed border-gold/[0.28]" />
           <div className="absolute inset-16 animate-slow-spin rounded-full border border-mint/[0.14] [animation-direction:reverse]" />
           <div className="absolute h-[78%] w-[78%] animate-gold-pulse rounded-full bg-gold/[0.14] blur-3xl" />
-          <div className="ai-core glass relative z-10 flex h-[78%] w-[78%] items-center justify-center rounded-full">
-            <DreamMark className="h-[82%] w-[68%] animate-float-lux" />
+          <div className="ai-core relative z-10 flex h-[78%] w-[78%] flex-col items-center justify-center rounded-full border border-mint/10 backdrop-blur-[2px]">
+            <DreamMark className="h-[72%] w-[62%] animate-float-lux" />
+            <p className="mt-3 font-display text-4xl tracking-[0.45em] text-gold">
+              DUMA
+            </p>
           </div>
         </div>
       </div>
