@@ -391,9 +391,9 @@ function Services({ onSelectService }) {
               key={`${service.title}-${index}`}
               className="service-card service-slide glass text-left"
               type="button"
-              onClick={() => onSelectService(service)}
-            >
-              <span className="service-orb flex items-center justify-center text-lg text-white">
+              onClick={() => onSelectService(service)}>
+              
+              <span className="service-orb flex items-center justify-center text-xl text-[#D1FAE5] leading-none">
                 {service.icon}
               </span>
               <p className="mb-4 text-xs font-black uppercase tracking-[0.2em] text-gold">
