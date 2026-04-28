@@ -11,6 +11,7 @@ const contact = {
 const services = [
   {
     title: "Website Development",
+    icon:"◈",
     summary: "Premium websites enhanced with intelligent user journeys, automation, and conversion systems.",
     does: "Creates high-performing websites that combine elegant design, fast loading, AI-assisted flows, and business-ready integrations.",
     benefits: ["Premium first impression", "Smarter customer journeys", "Better lead capture", "Scalable digital foundation"],
@@ -19,6 +20,7 @@ const services = [
   },
   {
     title: "Chatbots",
+    icon:"◈",
     summary: "Smart website assistants that answer questions, qualify leads, and guide visitors instantly.",
     does: "Deploys conversational AI that understands common customer needs and routes people toward the right next step.",
     benefits: ["24/7 response", "Lead qualification", "Lower support load", "Improved visitor confidence"],
@@ -27,6 +29,7 @@ const services = [
   },
   {
     title: "Workflow Automation",
+    icon:"◈",
     summary: "Automated systems that remove repetitive admin and keep your team moving faster.",
     does: "Connects tools, triggers, forms, notifications, and data flows so routine work happens without manual chasing.",
     benefits: ["Reduced manual tasks", "Cleaner operations", "Faster follow-up", "Fewer missed steps"],
@@ -35,6 +38,7 @@ const services = [
   },
   {
     title: "WhatsApp Automation",
+    icon:"◈",
     summary: "Customer conversations, lead follow-ups, and reminders automated through WhatsApp flows.",
     does: "Builds WhatsApp response and follow-up systems for inquiries, booking journeys, updates, and nurturing.",
     benefits: ["Instant replies", "Higher response rates", "Automated follow-ups", "Better customer experience"],
@@ -43,6 +47,7 @@ const services = [
   },
   {
     title: "Marketing Systems",
+    icon:"◈",
     summary: "Campaign systems that help attract, nurture, and convert customers with intelligence.",
     does: "Combines audience strategy, content workflows, automation, and tracking into a sharper marketing engine.",
     benefits: ["Clearer campaigns", "Consistent follow-up", "Better insights", "More qualified leads"],
@@ -51,6 +56,7 @@ const services = [
   },
   {
     title: "Lead Generation Funnels",
+    icon:"◈",
     summary: "Premium landing and follow-up journeys designed to turn attention into inquiries.",
     does: "Creates conversion paths from traffic source to lead capture, qualification, and booked conversation.",
     benefits: ["More inquiries", "Cleaner qualification", "Better tracking", "Higher campaign ROI"],
@@ -59,6 +65,7 @@ const services = [
   },
   {
     title: "Branding & Identity",
+    icon:"◈",
     summary: "Distinctive brand systems that make your AI-powered business feel credible and premium.",
     does: "Shapes the visual language, tone, and digital presence that make your business recognizable.",
     benefits: ["Stronger trust", "Premium positioning", "Consistent visuals", "Clearer messaging"],
@@ -67,6 +74,7 @@ const services = [
   },
   {
     title: "SEO Optimization",
+    icon:"◈",
     summary: "Technical and content improvements that help your website get found by the right audience.",
     does: "Improves discoverability through structure, metadata, speed, content clarity, and search-friendly pages.",
     benefits: ["More organic visibility", "Better page structure", "Improved performance", "Long-term growth"],
@@ -75,6 +83,7 @@ const services = [
   },
   {
     title: "Social Media Automation",
+    icon:"◈",
     summary: "Content and scheduling workflows that keep your brand consistent across channels.",
     does: "Streamlines planning, content creation, approvals, scheduling, and response workflows.",
     benefits: ["Consistent posting", "Faster content cycles", "Cleaner approvals", "Less operational drag"],
@@ -83,6 +92,7 @@ const services = [
   },
   {
     title: "Custom Solutions",
+    icon:"◈",
     summary: "Tailored AI systems built around your specific business challenge.",
     does: "Designs bespoke AI workflows for research, support, content, operations, sales, or internal knowledge.",
     benefits: ["Purpose-built tools", "More efficient teams", "Better decision support", "Competitive advantage"],
@@ -91,6 +101,7 @@ const services = [
   },
   {
     title: "CRM Automation",
+    icon:"◈",
     summary: "Smarter customer pipelines that organize leads, tasks, reminders, and follow-ups.",
     does: "Connects your forms, channels, customer records, and team actions into a reliable CRM workflow.",
     benefits: ["No missed leads", "Better sales visibility", "Automated reminders", "Cleaner customer data"],
@@ -99,6 +110,7 @@ const services = [
   },
   {
     title: "Appointment Booking Systems",
+    icon:"◈",
     summary: "Smooth booking journeys for consultations, demos, calls, and service appointments.",
     does: "Creates appointment flows that connect availability, forms, reminders, and confirmation messages.",
     benefits: ["Fewer back-and-forth messages", "Better show-up rates", "Clearer intake", "Faster scheduling"],
@@ -107,6 +119,7 @@ const services = [
   },
   {
     title: "Content Creation",
+    icon:"◈",
     summary: "AI-assisted content workflows for websites, campaigns, blogs, and social media.",
     does: "Turns business ideas into structured content assets while keeping voice, quality, and strategy intact.",
     benefits: ["Faster content production", "Consistent voice", "More campaign output", "Reduced blank-page time"],
@@ -115,6 +128,7 @@ const services = [
   },
   {
     title: "Business Process Automation",
+    icon:"◈",
     summary: "End-to-end automation for repeated business processes across departments and tools.",
     does: "Transforms manual sequences into clear automated systems for intake, approval, delivery, and reporting.",
     benefits: ["Operational clarity", "Time savings", "Fewer errors", "Better accountability"],
@@ -123,6 +137,7 @@ const services = [
   },
   {
     title: "Landing Page Design",
+    icon:"◈",
     summary: "High-converting landing pages for offers, ads, launches, and lead magnets.",
     does: "Builds focused pages with strong messaging, premium visuals, clear CTAs, and tracking-ready structure.",
     benefits: ["Higher conversion potential", "Clearer offer presentation", "Faster campaign launch", "Better tracking"],
@@ -376,9 +391,11 @@ function Services({ onSelectService }) {
               key={`${service.title}-${index}`}
               className="service-card service-slide glass text-left"
               type="button"
-              onClick={() => onSelectService(service)}
-            >
-              <span className="service-orb" aria-hidden="true" />
+              onClick={() => onSelectService(service)}>
+              
+              <span className="service-orb flex items-center justify-center text-xl text-[#D1FAE5] leading-none">
+                {service.icon}
+              </span>
               <p className="mb-4 text-xs font-black uppercase tracking-[0.2em] text-gold">
                 {String((index % services.length) + 1).padStart(2, "0")}
               </p>
