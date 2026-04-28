@@ -343,11 +343,14 @@ function Hero() {
           </div>
         </div>
         <div className="relative mx-auto flex aspect-square w-full max-w-[540px] items-center justify-center">
-          <div className="absolute inset-0 rounded-full border border-gold/[0.15] bg-dark/[0.28] blur-[1px]" />
-          <div className="absolute inset-8 rounded-full border border-mint/[0.12]" />
-          <div className="absolute inset-0 animate-slow-spin rounded-full border border-dashed border-gold/[0.28]" />
-          <div className="absolute inset-16 animate-slow-spin rounded-full border border-mint/[0.14] [animation-direction:reverse]" />
-          <div className="absolute h-[78%] w-[78%] animate-gold-pulse rounded-full bg-gold/[0.14] blur-3xl" />
+          <div className="relative mx-auto flex aspect-square w-full max-w-[540px] items-center justify-center">
+            <div className="ai-core relative z-10 flex h-[72%] w-[72%] flex-col items-center justify-center rounded-full border border-white/10 backdrop-blur-[2px]">
+              <DreamMark className="h-[70%] w-[65%] animate-float-lux opacity-90" />
+              <p className="mt-4 font-display text-3xl tracking-[0.4em] text-white/80">
+                DUMA
+              </p>
+            </div>
+          </div>
           <div className="ai-core relative z-10 flex h-[78%] w-[78%] flex-col items-center justify-center rounded-full border border-mint/10 backdrop-blur-[2px]">
             <DreamMark className="h-[72%] w-[62%] animate-float-lux" />
             <p className="mt-3 font-display text-4xl tracking-[0.45em] text-gold">
@@ -364,7 +367,7 @@ function IntelligenceRibbon() {
   const words = ["AI Automation", "Smart Websites", "Chatbots", "Workflow Systems", "Brand Intelligence", "Growth Funnels"];
   return (
     <div className="border-y border-mint/10 bg-white/[0.035] py-5">
-      <div className="marquee-track flex w-max gap-10">
+      <div className="marquee-track flex w-max gap-10 px-4">
         {[...words, ...words, ...words, ...words].map((word, index) => (
           <span key={`${word}-${index}`} className="text-sm font-bold uppercase tracking-[0.24em] text-mint/[0.56]">
             {word} <span className="ml-10 text-gold">+</span>
