@@ -470,15 +470,22 @@ function WhyChoose() {
           copy="DUMA combines modern AI thinking with refined brand experience and practical delivery."
         />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {whyChoose.map((item) => (
-            <article key={item} className="glass feature-card rounded-lg p-6">
-              <div className="mb-5 h-11 w-11 rounded-full border border-gold/[0.35] bg-gold/[0.12] shadow-aureate" />
-              <h3 className="font-display text-3xl font-bold text-white">{item}</h3>
-              <p className="mt-4 leading-7 text-mint/[0.64]">
-                Reliable, modern systems designed to help your business move with clarity and confidence.
-              </p>
-            </article>
-          ))}
+          {whyChoose.map((item, index) => (
+      <article
+        key={item}
+        className="glass feature-card rounded-lg p-6 flex items-center gap-4"
+        >
+        {/* Icon Bubble */}
+        <div className="flex h-12 w-12 items-center justify-center rounded-full border border-mint/20 bg-white/[0.03] text-white text-lg">
+          ✴
+        </div>
+        
+        {/* Heading */}
+        <h3 className="font-display text-2xl font-bold text-white">
+          {item}
+        </h3>
+      </article>
+    ))}
         </div>
       </div>
     </section>
