@@ -348,8 +348,11 @@ function Hero() {
           <div className="absolute inset-0 animate-slow-spin rounded-full border border-dashed border-gold/[0.28]" />
           <div className="absolute inset-16 animate-slow-spin rounded-full border border-mint/[0.14] [animation-direction:reverse]" />
           <div className="absolute h-[78%] w-[78%] animate-gold-pulse rounded-full bg-gold/[0.14] blur-3xl" />
-          <div className="ai-core glass relative z-10 flex h-[78%] w-[78%] items-center justify-center rounded-full">
-            <DreamMark className="h-[82%] w-[68%] animate-float-lux" />
+          <div className="ai-core relative z-10 flex h-[78%] w-[78%] flex-col items-center justify-center rounded-full border border-mint/10 backdrop-blur-[2px]">
+            <DreamMark className="h-[72%] w-[62%] animate-float-lux" />
+            <p className="mt-3 font-display text-4xl tracking-[0.45em] text-gold">
+              DUMA
+            </p>
           </div>
         </div>
       </div>
@@ -360,16 +363,33 @@ function Hero() {
 function IntelligenceRibbon() {
   const words = ["AI Automation", "Smart Websites", "Chatbots", "Workflow Systems", "Brand Intelligence", "Growth Funnels"];
   return (
-    <div className="border-y border-mint/10 bg-white/[0.035] py-5">
-      <div className="marquee-track flex w-max gap-10">
-        {[...words, ...words, ...words, ...words].map((word, index) => (
-          <span key={`${word}-${index}`} className="text-sm font-bold uppercase tracking-[0.24em] text-mint/[0.56]">
-            {word} <span className="ml-10 text-gold">+</span>
-          </span>
-        ))}
-      </div>
+  <div className="border-y border-mint/10 bg-white/[0.035] py-5">
+    {/* Desktop scrolling */}
+    <div className="hidden md:flex marquee-track gap-10">
+      {words.map((word, index) => (
+        <span
+          key={index}
+          className="text-sm font-bold uppercase tracking-[0.24em] text-mint/[0.56]"
+        >
+          {word} 
+        </span>
+      ))}
     </div>
-  );
+
+    {/* Mobile stacked */}
+    <div className="grid grid-cols-2 gap-4 px-4 md:hidden">
+      {words.map((word, index) => (
+        <div
+          key={index}
+          className="text-xs text-mint/[0.6] font-semibold"
+        >
+          {word}
+        </div>
+      ))}
+    </div>
+
+  </div>
+);
 }
 
 function Services({ onSelectService }) {
